@@ -1,0 +1,14 @@
+{
+  "name": "mcsr-api",
+  "version": "1.0.0",
+  "description": "A JavaScript wrapper for the MCSR Ranked API.",
+  "main": "index.js",
+  "keywords": [
+    "mcsr",
+    "minecraft",
+    "mcsr api"
+  ],
+  "dependencies": {},
+  "author": "yoru#9267",
+  "license": "MIT"
+}
