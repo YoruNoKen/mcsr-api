@@ -2,7 +2,7 @@ class MCSR {
 	static baseURL = "https://mcsrranked.com/api";
 
 	async getUserStats(username) {
-		const url = `${this.baseURL}/users/${username}`;
+		const url = `${MCSR.baseURL}/users/${username}`;
 
 		let response;
 		try {
@@ -18,7 +18,7 @@ class MCSR {
 	}
 
 	async getUserVersus(username1, username2) {
-		const url = `${this.baseURL}/users/${username1}/versus/${username2}`;
+		const url = `${MCSR.baseURL}/users/${username1}/versus/${username2}`;
 
 		let response;
 		try {
@@ -35,7 +35,7 @@ class MCSR {
 	}
 
 	async getGlobalLeaderboard() {
-		const url = `${this.baseURL}/leaderboard`;
+		const url = `${MCSR.baseURL}/leaderboard`;
 
 		let response;
 		try {
@@ -48,7 +48,7 @@ class MCSR {
 	}
 
 	async getRecentMatch(username) {
-		const url = `${this.baseURL}/users/${username}/matches`;
+		const url = `${MCSR.baseURL}/users/${username}/matches`;
 
 		let response;
 		try {
@@ -64,7 +64,7 @@ class MCSR {
 	}
 
 	async getVersusMatch(username1, username2) {
-		const url = `${this.baseURL}/users/${username1}/versus/${username2}/matches`;
+		const url = `${MCSR.baseURL}/users/${username1}/versus/${username2}/matches`;
 
 		let response;
 		try {
