@@ -27,6 +27,6 @@ const user_versus = await api.getUserVersus("user1", "user2");
 
 const leaderboard = await api.getGlobalLeaderboard();
 
-const user_match = await api.getRecentMatch("user", match_type, { page, count });
-const user_match_versus = await api.getVersusMatch("user1", "user2", match_type, { page, count });
+const user_match = await api.getRecentMatch("user", { match_type, page, count });
+const user_match_versus = await api.getVersusMatch("user1", "user2", { match_type, page, count });
 ```

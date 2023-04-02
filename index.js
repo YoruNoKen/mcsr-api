@@ -47,7 +47,7 @@ class MCSR {
 		return response.data;
 	}
 
-	async getRecentMatch(username, match_type, { page, count }) {
+	async getRecentMatch(username, { match_type, page, count }) {
 		let _type = match_type;
 		let _page = page;
 		let _count = count;
@@ -82,7 +82,7 @@ class MCSR {
 		return response.data;
 	}
 
-	async getVersusMatch(username1, username2, match_type, { page, count }) {
+	async getVersusMatch(username1, username2, { match_type, page, count }) {
 		let _type = match_type;
 		let _page = page;
 		let _count = count;
