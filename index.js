@@ -47,13 +47,20 @@ class MCSR {
 		return response.data;
 	}
 
-	async getRecentMatch(username, match_type) {
+	async getRecentMatch(username, match_type, { page, count }) {
 		let _type = match_type;
-		let _filter;
-		if (_type == undefined) {
-			_filter = "";
-		} else {
-			_filter = `?filter=${_type}`;
+		let _page = page;
+		let _count = count;
+
+		let _filter = "";
+		if (_type !== undefined) {
+			_filter += `?filter=${_type}`;
+		}
+		if (_page !== undefined) {
+			_filter += `&page=${_page}`;
+		}
+		if (_count !== undefined) {
+			_filter += `&count=${_count}`;
 		}
 
 		const url = `${MCSR.baseURL}/users/${username}/matches${_filter}`;
@@ -75,13 +82,20 @@ class MCSR {
 		return response.data;
 	}
 
-	async getVersusMatch(username1, username2, match_type) {
+	async getVersusMatch(username1, username2, match_type, { page, count }) {
 		let _type = match_type;
-		let _filter;
-		if (_type == undefined) {
-			_filter = "";
-		} else {
-			_filter = `?filter=${_type}`;
+		let _page = page;
+		let _count = count;
+
+		let _filter = "";
+		if (_type !== undefined) {
+			_filter += `?filter=${_type}`;
+		}
+		if (_page !== undefined) {
+			_filter += `&page=${_page}`;
+		}
+		if (_count !== undefined) {
+			_filter += `&count=${_count}`;
 		}
 
 		const url = `${MCSR.baseURL}/users/${username1}/versus/${username2}/matches${_filter}`;
