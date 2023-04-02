@@ -1,6 +1,6 @@
 {
   "name": "mcsr-api",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A JavaScript wrapper for the MCSR Ranked API.",
   "main": "index.js",
   "keywords": [
@@ -10,5 +10,9 @@
   ],
   "dependencies": {},
   "author": "yoru#9267",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YoruNoKen/mcsr-api"
+  }
 }
