@@ -2,7 +2,7 @@
 
 # Usage
 
-## [Documentation](https://github.com/YoruNoKen//wiki)
+## [Documentation](https://github.com/YoruNoKen/mcsr-api/wiki)
 
 ## Installation
 
