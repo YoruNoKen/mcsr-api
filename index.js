@@ -28,7 +28,7 @@ class MCSR {
 		}
 
 		if (response.status == "error") {
-			throw new Error("Invalid Username");
+			throw new Error("Invalid Username(s)");
 		}
 
 		return response.data;
@@ -47,24 +47,44 @@ class MCSR {
 		return response.data;
 	}
 
-	async getRecentMatch(username) {
-		const url = `${MCSR.baseURL}/users/${username}/matches`;
+	async getRecentMatch(username, match_type) {
+		let _type = match_type;
+		let _filter;
+		if (_type == undefined) {
+			_filter = "";
+		} else {
+			_filter = `?filter=${_type}`;
+		}
+
+		const url = `${MCSR.baseURL}/users/${username}/matches${_filter}`;
 
 		let response;
 		try {
-			response = await fetch(url).then((res) => res.json());
+			response = await fetch(url, { method: "GET" }).then((res) => res.json());
 		} catch (err) {
 			return err;
 		}
 
 		if (response.status == "error") {
-			throw new Error("Invalid Username");
+			if (response.data == null) {
+				throw new Error("Invalid Username");
+			} else {
+				throw new Error(response.data);
+			}
 		}
 		return response.data;
 	}
 
-	async getVersusMatch(username1, username2) {
-		const url = `${MCSR.baseURL}/users/${username1}/versus/${username2}/matches`;
+	async getVersusMatch(username1, username2, match_type) {
+		let _type = match_type;
+		let _filter;
+		if (_type == undefined) {
+			_filter = "";
+		} else {
+			_filter = `?filter=${_type}`;
+		}
+
+		const url = `${MCSR.baseURL}/users/${username1}/versus/${username2}/matches${_filter}`;
 
 		let response;
 		try {
@@ -74,7 +94,11 @@ class MCSR {
 		}
 
 		if (response.status == "error") {
-			throw new Error("Invalid Username");
+			if (response.data == null) {
+				throw new Error("Invalid Username(s)");
+			} else {
+				throw new Error(response.data);
+			}
 		}
 
 		return response.data;
