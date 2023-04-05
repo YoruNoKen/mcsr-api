@@ -12,7 +12,7 @@
 ## Installation
 
 ```
-npm install mcsr-api
+npm install mcsr-ranked-api
 ```
 
 # Functions
