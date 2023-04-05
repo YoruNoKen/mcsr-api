@@ -1,8 +1,8 @@
-class MCSR {
+class ranked_api {
 	static baseURL = "https://mcsrranked.com/api";
 
 	async getUserStats(username) {
-		const url = `${MCSR.baseURL}/users/${username}`;
+		const url = `${ranked_api.baseURL}/users/${username}`;
 
 		let response;
 		try {
@@ -18,7 +18,7 @@ class MCSR {
 	}
 
 	async getUserVersus(username1, username2) {
-		const url = `${MCSR.baseURL}/users/${username1}/versus/${username2}`;
+		const url = `${ranked_api.baseURL}/users/${username1}/versus/${username2}`;
 
 		let response;
 		try {
@@ -35,7 +35,7 @@ class MCSR {
 	}
 
 	async getGlobalLeaderboard() {
-		const url = `${MCSR.baseURL}/leaderboard`;
+		const url = `${ranked_api.baseURL}/leaderboard`;
 
 		let response;
 		try {
@@ -63,7 +63,7 @@ class MCSR {
 			_filter += `&count=${_count}`;
 		}
 
-		const url = `${MCSR.baseURL}/users/${username}/matches${_filter}`;
+		const url = `${ranked_api.baseURL}/users/${username}/matches${_filter}`;
 
 		let response;
 		try {
@@ -98,7 +98,7 @@ class MCSR {
 			_filter += `&count=${_count}`;
 		}
 
-		const url = `${MCSR.baseURL}/users/${username1}/versus/${username2}/matches${_filter}`;
+		const url = `${ranked_api.baseURL}/users/${username1}/versus/${username2}/matches${_filter}`;
 
 		let response;
 		try {
@@ -119,4 +119,4 @@ class MCSR {
 	}
 }
 
-module.exports.MCSR = MCSR;
+module.exports.MCSR = ranked_api;

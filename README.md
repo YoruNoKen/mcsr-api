@@ -1,9 +1,9 @@
 ### mcsr-api
 
-[![](https://img.shields.io/npm/v/mcsr-api?color=AD745F&style=for-the-badge)](https://www.npmjs.com/package/mcsr-api)
-[![](https://img.shields.io/bundlephobia/min/@aqilcont/mcsr-api?color=5FAE89&label=size&style=for-the-badge)](https://www.npmjs.com/package/mcsr-api)
-[![](https://img.shields.io/npm/dm/mcsr-api?color=625FAD&style=for-the-badge)](https://npm-stat.com/charts.html?package=mcsr-api)
-![](https://img.shields.io/npm/l/mcsr-api?color=AD5F8C&style=for-the-badge)
+[![](https://img.shields.io/npm/v/mcsr-ranked-api?color=AD745F&style=for-the-badge)](https://www.npmjs.com/package/mcsr-api)
+[![](https://img.shields.io/bundlephobia/min/@aqilcont/mcsr-ranked-api?color=5FAE89&label=size&style=for-the-badge)](https://www.npmjs.com/package/mcsr-api)
+[![](https://img.shields.io/npm/dm/mcsr-ranked-api?color=625FAD&style=for-the-badge)](https://npm-stat.com/charts.html?package=mcsr-api)
+![](https://img.shields.io/npm/l/mcsr-ranked-api?color=AD5F8C&style=for-the-badge)
 
 # Usage
 
@@ -18,9 +18,9 @@ npm install mcsr-api
 # Functions
 
 ```js
-const { MCSR } = require("mcsr-api");
+const { ranked_api } = require("mcsr-ranked-api");
 
-var api = new MCSR();
+var api = new ranked_api();
 
 const user = await api.getUserStats("user");
 const user_versus = await api.getUserVersus("user1", "user2");
