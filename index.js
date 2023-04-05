@@ -119,4 +119,4 @@ class ranked_api {
 	}
 }
 
-module.exports.MCSR = ranked_api;
+module.exports = ranked_api;
