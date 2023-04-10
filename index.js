@@ -54,7 +54,7 @@ class ranked_api {
 
 		let _filter = "";
 		if (_type !== undefined) {
-			_filter += `?filter=${_type}`;
+			_filter += `&filter=${_type}`;
 		}
 		if (_page !== undefined) {
 			_filter += `&page=${_page}`;
@@ -62,12 +62,13 @@ class ranked_api {
 		if (_count !== undefined) {
 			_filter += `&count=${_count}`;
 		}
+		_filter = _filter.replace("/^&/", "?");
 
 		const url = `${ranked_api.baseURL}/users/${username}/matches${_filter}`;
 
 		let response;
 		try {
-			response = await fetch(url, { method: "GET" }).then((res) => res.json());
+			response = await fetch(url).then((res) => res.json());
 		} catch (err) {
 			return err;
 		}
@@ -89,7 +90,7 @@ class ranked_api {
 
 		let _filter = "";
 		if (_type !== undefined) {
-			_filter += `?filter=${_type}`;
+			_filter += `&filter=${_type}`;
 		}
 		if (_page !== undefined) {
 			_filter += `&page=${_page}`;
@@ -97,6 +98,7 @@ class ranked_api {
 		if (_count !== undefined) {
 			_filter += `&count=${_count}`;
 		}
+		_filter = _filter.replace("/^&/", "?");
 
 		const url = `${ranked_api.baseURL}/users/${username1}/versus/${username2}/matches${_filter}`;
 
