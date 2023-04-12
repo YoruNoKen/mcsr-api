@@ -74,7 +74,7 @@ function addFilters(match_type, page, count) {
 	if (count !== undefined) {
 		_filter += `&count=${count}`;
 	}
-	_filter = _filter.replace("/^&/", "?");
+	_filter = _filter.replace(/^&/, "?");
 	return _filter;
 }
 
