@@ -4,7 +4,7 @@ class ranked_api {
   async getUserStats(username, opponent) {
     let url = `${ranked_api.baseURL}/users/${username}`;
     if (opponent !== undefined) {
-      url = +`/versus/${opponent}`;
+      url += `/versus/${opponent}`;
     }
 
     let response;
@@ -57,9 +57,9 @@ class ranked_api {
 
     let url = `${ranked_api.baseURL}/users/${username}`;
     if (opponent !== undefined) {
-      url = +`/versus/${opponent}`;
+      url += `/versus/${opponent}`;
     }
-    url = +`/matches${filter}`;
+    url += `/matches${filter}`;
 
     let response;
     try {
