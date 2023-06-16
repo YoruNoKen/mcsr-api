@@ -1,19 +1,25 @@
- {
+{
   "name": "mcsr-ranked-api",
-  "version": "1.6.0",
+  "version": "2.1.0",
   "description": "A JavaScript wrapper for the MCSR Ranked API.",
-  "main": "index.js",
+  "main": "dist/api/index.js",
   "keywords": [
     "mcsr",
     "minecraft",
     "mcsr api"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "type": "module",
-  "dependencies": {},
   "author": "yoru#9267",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/YoruNoKen/mcsr-api"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
   }
 }
