@@ -1,6 +1,6 @@
 {
   "name": "mcsr-ranked-api",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A JavaScript wrapper for the MCSR Ranked API.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
