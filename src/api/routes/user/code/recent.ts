@@ -1,13 +1,13 @@
 import { addFilters } from "../../../../utils/addFilters";
 import { getRecentMatch } from "../../../../types/getRecentMatch";
 
-export default async function getRecentMatch(username: string, { opponent, match_type, page, count }: { opponent?: string; match_type: string; page: number | string; count: number | string }): Promise<getRecentMatch> {
+export default async function getRecentMatch({ username, opponent, match_type, page, count }: { username: string; opponent?: string; match_type: string; page: number | string; count: number | string }): Promise<getRecentMatch> {
   let baseURL = "https://mcsrranked.com/api";
   let type = match_type;
   const filter = addFilters(type, page, count);
 
   let url = `${baseURL}/users/${username}`;
-  if ((opponent as string | undefined) !== undefined) {
+  if (opponent !== undefined) {
     url += `/versus/${opponent}`;
   }
   url += `/matches${filter}`;
