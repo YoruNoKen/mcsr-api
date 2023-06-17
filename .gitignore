@@ -1,2 +1,6 @@
-node_modules/
-*.js
+/test
+dist/
+/wiki
+/node_modules
+index.js
+package-lock.json
